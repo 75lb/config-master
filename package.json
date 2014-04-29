@@ -1,8 +1,8 @@
 {
-  "name": "load-config",
+  "name": "config-master",
   "version": "0.0.0",
   "description": "Load config",
-  "main": "lib/load-config.js",
+  "main": "lib/config-master.js",
   "author": "Lloyd Brookes",
   "scripts": {
       "test": "tape test/*.js"
