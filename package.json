@@ -2,6 +2,7 @@
   "name": "config-master",
   "version": "0.0.0",
   "description": "Load config",
+  "repository": "https://github.com/75lb/config-master",
   "main": "lib/config-master.js",
   "author": "Lloyd Brookes",
   "scripts": {
