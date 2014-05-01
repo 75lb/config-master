@@ -1,12 +1,12 @@
 {
   "name": "config-master",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Load config",
   "repository": "https://github.com/75lb/config-master",
   "main": "lib/config-master.js",
   "author": "Lloyd Brookes",
   "scripts": {
-      "test": "tape test/*.js"
+    "test": "tape test/*.js"
   },
   "dependencies": {
     "wodge": "~0.5.0"
@@ -15,7 +15,7 @@
     "tape": "^2.12.3"
   },
   "config": {
-      "one": "einen",
-      "four": "package"
+    "one": "einen",
+    "four": "package"
   }
 }
