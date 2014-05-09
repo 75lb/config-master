@@ -1,6 +1,6 @@
 [![view on npm](http://img.shields.io/npm/v/config-master.svg)](https://www.npmjs.org/package/config-master)
 ![npm module downloads per month](http://img.shields.io/npm/dm/config-master.svg)
-[![Dependency Status](https://david-dm.org/75lb/config-master.png)](https://david-dm.org/75lb/config-master)
+[![Dependency Status](https://david-dm.org/75lb/config-master.svg)](https://david-dm.org/75lb/config-master)
 
 **work in progress**
 
