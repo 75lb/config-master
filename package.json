@@ -9,7 +9,7 @@
     "test": "tape test/*.js"
   },
   "dependencies": {
-    "wodge": "~0.5.0"
+    "wodge": "~0.6.0"
   },
   "devDependencies": {
     "tape": "^2.12.3"
