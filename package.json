@@ -1,6 +1,6 @@
 {
   "name": "config-master",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Load config",
   "repository": "https://github.com/75lb/config-master",
   "main": "lib/config-master.js",
