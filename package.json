@@ -1,7 +1,7 @@
 {
   "name": "config-master",
   "version": "0.1.1",
-  "description": "Load config",
+  "description": "Merges together config data loaded from external JSON files",
   "repository": "https://github.com/75lb/config-master",
   "main": "lib/config-master.js",
   "author": "Lloyd Brookes",
@@ -9,7 +9,8 @@
     "test": "tape test/*.js"
   },
   "dependencies": {
-    "wodge": "~0.6.0"
+    "array-ting": "^0.1.1",
+    "object-ting": "^0.1.1"
   },
   "devDependencies": {
     "tape": "^2.12.3"
