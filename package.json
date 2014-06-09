@@ -9,8 +9,8 @@
     "test": "tape test/*.js"
   },
   "dependencies": {
-    "array-ting": "^0.1.1",
-    "object-ting": "^0.1.1"
+    "array-ting": "^1.0.0",
+    "object-ting": "^1.0.0"
   },
   "devDependencies": {
     "tape": "^2.12.3"
