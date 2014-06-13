@@ -12,7 +12,7 @@ Merges together JSON data from the specified files, in the specified order. Desi
 - ...jsonPath `string` the paths of JSON files to merge. If the JSON data you want to merge is contained *within* the JSON file, pass an object specifying the `jsonPath` and `configProperty`.  
 
 
-**Returns**: `Object` - - the merged JSON data
+**Returns**: `Object` - the merged JSON data
 
 ####Example
 ```js
@@ -22,6 +22,8 @@ var storedConfig = loadConfig(
     "~/.global-defaults.json", 
     "project-specific-defaults.json", 
     { jsonPath: "package.json", configProperty: "config" }
+);
+```
 
 
 
