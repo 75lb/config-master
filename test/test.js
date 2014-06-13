@@ -5,8 +5,8 @@ var test = require("tape"),
 var path = {
     one: path.resolve("test", "config1.json"),
     two: path.resolve("test", "config2.json"),
-    three: path.resolve("test", "package.json") + ":config",
-    four: path.resolve("test", "package2.json") + ":config"
+    three: { jsonPath: path.resolve("test", "package.json"), configProperty: "config" },
+    four: { jsonPath: path.resolve("test", "package2.json"), configProperty: "config" }
 };
 
 test("merges correctly", function(t){
