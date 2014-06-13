@@ -6,13 +6,16 @@
   "main": "lib/config-master.js",
   "author": "Lloyd Brookes",
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "tape test/*.js",
+    "lint": "jshint lib/config-master.js test/*.js; echo",
+    "docs": "jsdoc2md -t jsdoc2md/README.hbs lib/config-master.js > README.md; echo"
   },
   "dependencies": {
     "array-tools": "^1.0.0",
     "object-tools": "^1.0.0"
   },
   "devDependencies": {
+    "jsdoc-to-markdown": "^0.1.7",
     "tape": "^2.12.3"
   },
   "config": {
