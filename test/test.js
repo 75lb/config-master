@@ -1,8 +1,16 @@
 var test = require("tape"),
-    config = require("../lib/config-master.js");
+    config = require("../lib/config-master.js"),
+    path = require("path");
+
+var path = {
+    one: path.resolve("test", "config1.json"),
+    two: path.resolve("test", "config2.json"),
+    three: path.resolve("test", "package.json") + ":config",
+    four: path.resolve("test", "package2.json") + ":config"
+};
 
 test("merges correctly", function(t){
-    var c = config("test/config1.json", "test/config2.json", "test/package.json:config");
+    var c = config(path.one, path.two, path.three);
     t.deepEqual(c, {
         one: "einen",
         two: "zwei",
@@ -13,7 +21,7 @@ test("merges correctly", function(t){
 });
 
 test("missing package.json property", function(t){
-    var c = config("test/config1.json", "test/config2.json", "test/package2.json:config");
+    var c = config(path.one, path.two, path.four);
     t.deepEqual(c, {
         "one": 1,
         "two": "zwei",
