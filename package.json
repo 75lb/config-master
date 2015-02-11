@@ -11,12 +11,11 @@
     "docs": "jsdoc2md -t jsdoc2md/README.hbs lib/config-master.js > README.md; echo"
   },
   "dependencies": {
-    "array-tools": "^1.0.0",
+    "array-tools": "^1.5.0",
     "object-tools": "^1.0.0"
   },
   "devDependencies": {
-    "jsdoc-to-markdown": "^0.1.7",
-    "tape": "^2.12.3"
+    "tape": "^3.5"
   },
   "config": {
     "one": "einen",

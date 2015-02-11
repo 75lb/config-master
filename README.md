@@ -3,18 +3,17 @@
 [![Build Status](https://travis-ci.org/75lb/config-master.svg?branch=master)](https://travis-ci.org/75lb/config-master)
 [![Dependency Status](https://david-dm.org/75lb/config-master.svg)](https://david-dm.org/75lb/config-master)
 
-
-#config-master
+<a name="module_config-master"></a>
+## config-master ⇒ <code>Object</code>
 Merges together JSON data from the specified files, in the specified order. Designed for app config management.
 
+**Returns**: <code>Object</code> - the merged JSON data  
 
+| Param | Type | Description |
+| --- | --- | --- |
+| ...jsonPath | <code>string</code> | the paths of JSON files to merge. If the JSON data you want to merge is contained *within* the JSON file, pass an object specifying the `jsonPath` and `configProperty`. |
 
-- ...jsonPath `string` the paths of JSON files to merge. If the JSON data you want to merge is contained *within* the JSON file, pass an object specifying the `jsonPath` and `configProperty`.  
-
-
-**Returns**: `Object` - the merged JSON data
-
-####Example
+**Example**  
 ```js
 var loadConfig = require("config-master");
 
@@ -26,16 +25,7 @@ var storedConfig = loadConfig(
 ```
 
 
+---
+*documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*
 
-
-
-
-
-
-
-
-
-
-
-
-
+&copy; 2015 Lloyd Brookes <75pound@gmail.com>
