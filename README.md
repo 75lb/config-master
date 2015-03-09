@@ -7,7 +7,6 @@
 ## config-master ⇒ <code>Object</code>
 Merges together JSON data from the specified files, in the specified order. Designed for app config management.
 
-**Returns**: <code>Object</code> - the merged JSON data  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -24,8 +23,6 @@ var storedConfig = loadConfig(
 );
 ```
 
+* * *
 
----
-*documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*
-
-&copy; 2015 Lloyd Brookes <75pound@gmail.com>
+&copy; 2015 Lloyd Brookes <75pound@gmail.com>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).
