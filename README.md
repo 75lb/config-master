@@ -15,11 +15,12 @@ Merges together JSON data from the specified files, in the specified order. Desi
 **Example**  
 ```js
 var loadConfig = require("config-master");
+var homePath = require("home-path");
 
-var storedConfig = loadConfig(
-    "~/.global-defaults.json", 
-    "project-specific-defaults.json", 
-    { jsonPath: "package.json", configProperty: "config" }
+var config = loadConfig(
+    path.join(homePath(), ".config.json"),
+    path.join(process.cwd(), ".config.json"),
+    { jsonPath: path.join(process.cwd(), "package.json"), configProperty: "dmd" }
 );
 ```
 

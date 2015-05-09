@@ -8,14 +8,14 @@
   "scripts": {
     "test": "tape test/*.js",
     "lint": "jshint lib/config-master.js test/*.js; echo",
-    "docs": "jsdoc2md -t jsdoc2md/README.hbs -l js lib/config-master.js > README.md; echo"
+    "docs": "jsdoc2md -t jsdoc2md/README.hbs lib/config-master.js > README.md; echo"
   },
   "dependencies": {
     "array-tools": "^1.5.0",
     "object-tools": "^1.0.0"
   },
   "devDependencies": {
-    "tape": "^3.5"
+    "tape": "^4"
   },
   "config": {
     "one": "einen",
