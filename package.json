@@ -4,6 +4,7 @@
   "description": "Merges together config data loaded from external JSON files",
   "repository": "https://github.com/75lb/config-master",
   "main": "lib/config-master.js",
+  "license": "MIT",
   "author": "Lloyd Brookes",
   "scripts": {
     "test": "tape test/*.js",
@@ -11,11 +12,11 @@
     "docs": "jsdoc2md -t jsdoc2md/README.hbs lib/config-master.js > README.md; echo"
   },
   "dependencies": {
-    "array-tools": "^1.5.0",
-    "object-tools": "^1.0.0"
+    "array-back": "^1.0.2",
+    "object-tools": "^1.6.7"
   },
   "devDependencies": {
-    "tape": "^4"
+    "tape": "^4.2.1"
   },
   "config": {
     "one": "einen",

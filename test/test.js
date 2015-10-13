@@ -1,6 +1,6 @@
-var test = require("tape"),
-    config = require("../lib/config-master.js"),
-    path = require("path");
+var test = require("tape");
+var config = require("../lib/config-master.js");
+var path = require("path");
 
 var path = {
     one: path.resolve("test", "config1.json"),
