@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "array-back": "^1.0.2",
-    "object-tools": "^1.6.7"
+    "object-tools": "^2"
   },
   "devDependencies": {
     "tape": "^4.2.1"
