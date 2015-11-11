@@ -1,24 +1,31 @@
 {
   "name": "config-master",
   "version": "1.0.2",
-  "description": "Merges together config data loaded from external JSON files",
+  "description": "Load stored configuration data",
   "repository": "https://github.com/75lb/config-master",
-  "main": "lib/config-master.js",
+  "main": "index",
   "license": "MIT",
   "author": "Lloyd Brookes",
   "scripts": {
     "test": "tape test/*.js",
-    "lint": "jshint lib/config-master.js test/*.js; echo",
-    "docs": "jsdoc2md -t jsdoc2md/README.hbs lib/config-master.js > README.md; echo"
+    "docs": "jsdoc2md -t jsdoc2md/README.hbs lib/config-master.js > README.md; echo",
+    "es5": "babel --presets es2015 --no-comments lib --out-dir es5"
   },
+  "keywords": [
+    "configuration",
+    "manage",
+    "management",
+    "config",
+    "load",
+    "options",
+    "app"
+  ],
   "dependencies": {
+    "core-js": "^1.2.6",
+    "feature-detect-es6": "^1.0.0",
     "walk-back": "^1.0.1"
   },
   "devDependencies": {
     "tape": "^4.2.1"
-  },
-  "config": {
-    "one": "einen",
-    "four": "package"
   }
 }
