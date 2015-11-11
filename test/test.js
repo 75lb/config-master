@@ -1,6 +1,6 @@
 'use strict'
 var test = require('tape')
-var loadConfig = require('../lib/config-master.js')
+var loadConfig = require('../')
 
 test('new API', function(t){
   var config = loadConfig('test-app', { startFrom: __dirname + '/fixture/one/two' })

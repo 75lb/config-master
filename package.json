@@ -21,11 +21,12 @@
     "app"
   ],
   "dependencies": {
-    "core-js": "^1.2.6",
-    "feature-detect-es6": "^1.0.0",
+    "babel-polyfill": "^6.1.4",
+    "feature-detect-es6": "^1.1.0",
     "walk-back": "^1.0.1"
   },
   "devDependencies": {
-    "tape": "^4.2.1"
+    "tape": "^4.2.1",
+    "babel-preset-es2015": "^6.1.4"
   }
 }

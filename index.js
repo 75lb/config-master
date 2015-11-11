@@ -1,5 +1,8 @@
 var detect = require('feature-detect-es6')
 
-module.exports = detect.spread()
-  ? require('./lib/config-master')
-  : require('./es5/config-master')
+if (detect.spread() && detect.generators()) {
+  module.exports = require('./lib/config-master')
+} else {
+  require('babel-polyfill')
+  module.exports = require('./es5/config-master')
+}
