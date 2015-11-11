@@ -1,3 +1,4 @@
+'use strict'
 var test = require('tape')
 var loadConfig = require('../lib/config-master.js')
 
