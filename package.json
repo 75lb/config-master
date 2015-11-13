@@ -28,5 +28,8 @@
   "devDependencies": {
     "tape": "^4.2.1",
     "babel-preset-es2015": "^6.1.4"
+  },
+  "standard": {
+    "ignore": [ "es5" ]
   }
 }
