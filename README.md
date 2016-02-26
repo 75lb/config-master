@@ -6,6 +6,11 @@
 
 <a name="module_config-master"></a>
 ## config-master
+An opinion for collecting stored config. You supply a string (e.g. `'example-app'`), the libary will walk up the directory tree merging config stored for this app. The following locations are searched, with the latter taking precedence:
+
+- any package.json, beneath the `example-app` property
+- any `.example-app.json` files
+
 <a name="exp_module_config-master--loadConfig"></a>
 ### loadConfig(configName, [options]) ⇒ <code>Object</code> ⏏
 **Kind**: Exported function  
