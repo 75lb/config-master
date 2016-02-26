@@ -25,27 +25,29 @@ function loadConfig(configName, options) {
 function configsInTree(startFrom, fileName) {
   var file;
   return regeneratorRuntime.wrap(function configsInTree$(_context) {
-    while (1) switch (_context.prev = _context.next) {
-      case 0:
-        file = undefined;
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          file = undefined;
 
-      case 1:
-        if (!(file = walkBack(startFrom, fileName))) {
-          _context.next = 7;
+        case 1:
+          if (!(file = walkBack(startFrom, fileName))) {
+            _context.next = 7;
+            break;
+          }
+
+          _context.next = 4;
+          return require(file);
+
+        case 4:
+          startFrom = path.resolve(path.dirname(file), '..');
+          _context.next = 1;
           break;
-        }
 
-        _context.next = 4;
-        return require(file);
-
-      case 4:
-        startFrom = path.resolve(path.dirname(file), '..');
-        _context.next = 1;
-        break;
-
-      case 7:
-      case 'end':
-        return _context.stop();
+        case 7:
+        case 'end':
+          return _context.stop();
+      }
     }
   }, _marked[0], this);
 }
@@ -53,34 +55,36 @@ function configsInTree(startFrom, fileName) {
 function packageConfigsInTree(startFrom, configName) {
   var file, config;
   return regeneratorRuntime.wrap(function packageConfigsInTree$(_context2) {
-    while (1) switch (_context2.prev = _context2.next) {
-      case 0:
-        file = undefined;
+    while (1) {
+      switch (_context2.prev = _context2.next) {
+        case 0:
+          file = undefined;
 
-      case 1:
-        if (!(file = walkBack(startFrom, 'package.json'))) {
-          _context2.next = 9;
-          break;
-        }
+        case 1:
+          if (!(file = walkBack(startFrom, 'package.json'))) {
+            _context2.next = 9;
+            break;
+          }
 
-        config = require(file)[configName];
+          config = require(file)[configName];
 
-        if (!config) {
+          if (!config) {
+            _context2.next = 6;
+            break;
+          }
+
           _context2.next = 6;
+          return config;
+
+        case 6:
+          startFrom = path.resolve(path.dirname(file), '..');
+          _context2.next = 1;
           break;
-        }
 
-        _context2.next = 6;
-        return config;
-
-      case 6:
-        startFrom = path.resolve(path.dirname(file), '..');
-        _context2.next = 1;
-        break;
-
-      case 9:
-      case 'end':
-        return _context2.stop();
+        case 9:
+        case 'end':
+          return _context2.stop();
+      }
     }
   }, _marked[1], this);
 }
