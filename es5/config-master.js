@@ -10,8 +10,6 @@ var walkBack = require('walk-back');
 module.exports = loadConfig;
 
 function loadConfig(configName, options) {
-  var _Object;
-
   options = options || {};
   var configFileName = '.' + configName + '.json';
   var startFrom = options.startFrom || process.cwd();
@@ -19,7 +17,7 @@ function loadConfig(configName, options) {
   var configs = Array.from(configsInTree(startFrom, configFileName)).reverse();
   var packageConfigs = Array.from(packageConfigsInTree(startFrom, configName)).reverse();
 
-  return (_Object = Object).assign.apply(_Object, [{}].concat(_toConsumableArray(packageConfigs), _toConsumableArray(configs)));
+  return Object.assign.apply(Object, [{}].concat(_toConsumableArray(packageConfigs), _toConsumableArray(configs)));
 }
 
 function configsInTree(startFrom, fileName) {
@@ -28,7 +26,7 @@ function configsInTree(startFrom, fileName) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          file = undefined;
+          file = void 0;
 
         case 1:
           if (!(file = walkBack(startFrom, fileName))) {
@@ -58,7 +56,7 @@ function packageConfigsInTree(startFrom, configName) {
     while (1) {
       switch (_context2.prev = _context2.next) {
         case 0:
-          file = undefined;
+          file = void 0;
 
         case 1:
           if (!(file = walkBack(startFrom, 'package.json'))) {
