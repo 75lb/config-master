@@ -7,7 +7,7 @@
 <a name="module_config-master"></a>
 
 ## config-master
-An opinion for collecting stored config. You supply a string (e.g. `'example-app'`), the libary will walk up the directory tree merging config stored for this app. The following locations are searched, with the latter taking precedence:
+A convention for storing and retrieving application config. You supply a string (e.g. `'example-app'`), the libary will walk up the directory tree merging config stored for this app. The following locations are searched, with the latter taking precedence:
 
 - any package.json, beneath the `example-app` property
 - any `.example-app.json` files
@@ -26,4 +26,4 @@ An opinion for collecting stored config. You supply a string (e.g. `'example-app
 
 * * *
 
-&copy; 2015-16 Lloyd Brookes <75pound@gmail.com>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).
+&copy; 2014-16 Lloyd Brookes <75pound@gmail.com>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).
