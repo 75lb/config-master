@@ -2,8 +2,6 @@
 
 var _marked = [configsInTree, packageConfigsInTree].map(regeneratorRuntime.mark);
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
 var path = require('path');
 var walkBack = require('walk-back');
 
@@ -16,8 +14,7 @@ function loadConfig(configName, options) {
 
   var configs = Array.from(configsInTree(startFrom, configFileName)).reverse();
   var packageConfigs = Array.from(packageConfigsInTree(startFrom, configName)).reverse();
-
-  return Object.assign.apply(Object, [{}].concat(_toConsumableArray(packageConfigs), _toConsumableArray(configs)));
+  return Object.assign.apply(null, [{}].concat(packageConfigs).concat(configs));
 }
 
 function configsInTree(startFrom, fileName) {
