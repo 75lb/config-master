@@ -22,6 +22,7 @@ A convention for storing and retrieving application config. You supply a string 
 | configName | <code>string</code> | config name |
 | [options] | <code>object</code> | options |
 | [options.startFrom] | <code>string</code> | directory to begin looking for config |
+| [options.deep] | <code>boolean</code> | deep merge configs (default: false) |
 
 
 * * *

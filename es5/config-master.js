@@ -4,6 +4,10 @@ var _marked = [configsInTree, packageConfigsInTree].map(regeneratorRuntime.mark)
 
 var path = require('path');
 var walkBack = require('walk-back');
+var merge = {
+  deep: require('lodash.merge'),
+  flat: Object.assign
+};
 
 module.exports = loadConfig;
 
@@ -14,7 +18,8 @@ function loadConfig(configName, options) {
 
   var configs = Array.from(configsInTree(startFrom, configFileName)).reverse();
   var packageConfigs = Array.from(packageConfigsInTree(startFrom, configName)).reverse();
-  return Object.assign.apply(null, [{}].concat(packageConfigs).concat(configs));
+
+  return merge[options.deep || false ? 'deep' : 'flat'].apply(null, [{}].concat(packageConfigs).concat(configs));
 }
 
 function configsInTree(startFrom, fileName) {
