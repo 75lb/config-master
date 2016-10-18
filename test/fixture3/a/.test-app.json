@@ -1,0 +1,15 @@
+{
+  "mocks": [
+    {
+      "route": "/three",
+      "responses": [
+        {
+          "request": { "method": "PUT" },
+          "response": {
+            "body": "<h1>Mock response for 'PUT' request on /three</h1>"
+          }
+        }
+      ]
+    }
+  ]
+}

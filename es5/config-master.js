@@ -2,12 +2,11 @@
 
 var _marked = [configsInTree, packageConfigsInTree].map(regeneratorRuntime.mark);
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 var path = require('path');
 var walkBack = require('walk-back');
-var merge = {
-  deep: require('lodash.merge'),
-  flat: Object.assign
-};
+var mergeWith = require('lodash.mergewith');
 
 module.exports = loadConfig;
 
@@ -19,6 +18,17 @@ function loadConfig(configName, options) {
   var configs = Array.from(configsInTree(startFrom, configFileName)).reverse();
   var packageConfigs = Array.from(packageConfigsInTree(startFrom, configName)).reverse();
 
+  if (options.deep) {
+    var customiser = function customiser(objValue, srcValue) {
+      if (Array.isArray(objValue)) {
+        return objValue.concat(srcValue);
+      }
+    };
+
+    return mergeWith.apply(undefined, _toConsumableArray(packageConfigs).concat(_toConsumableArray(configs), [customiser]));
+  } else {
+    return Object.assign.apply(null, [{}].concat(packageConfigs).concat(configs));
+  }
   return merge[options.deep || false ? 'deep' : 'flat'].apply(null, [{}].concat(packageConfigs).concat(configs));
 }
 

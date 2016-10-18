@@ -1,0 +1,8 @@
+{
+  "test-app": {
+    "array1": [ 3, 4 ],
+    "array2": [
+      { "three": 3 }
+    ]
+  }
+}

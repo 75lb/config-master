@@ -1,0 +1,22 @@
+{
+  "mocks": [
+    {
+      "route": "/three",
+      "responses": [
+        {
+          "request": { "method": "GET" },
+          "response": {
+            "body": "<h1>Mock response for 'GET' request on /three</h1>"
+          }
+        },
+        {
+          "request": { "method": "POST" },
+          "response": {
+            "status": 400,
+            "body": { "message": "That method is not allowed." }
+          }
+        }
+      ]
+    }
+  ]
+}
