@@ -1,10 +1,10 @@
 'use strict'
-var test = require('test-runner')
-var loadConfig = require('../')
-var a = require('core-assert')
+const test = require('test-runner')
+const loadConfig = require('../')
+const a = require('assert')
 
 test('new API', function () {
-  var config = loadConfig('test-app', { startFrom: __dirname + '/fixture/one/two' })
+  const config = loadConfig('test-app', { startFrom: __dirname + '/fixture/one/two' })
   a.deepEqual(config, {
     one: 1,
     two: 2,
