@@ -15,8 +15,10 @@ function loadConfig(configName, options) {
   var configFileName = '.' + configName + '.json';
   var startFrom = options.startFrom || process.cwd();
 
-  var configs = Array.from(configsInTree(startFrom, configFileName)).reverse();
-  var packageConfigs = Array.from(packageConfigsInTree(startFrom, configName)).reverse();
+  var configs = Array.from(configsInTree(startFrom, configFileName));
+  var packageConfigs = Array.from(packageConfigsInTree(startFrom, configName));
+  console.error(require('util').inspect(configs, { depth: 13, colors: true }));
+  console.error(require('util').inspect(packageConfigs, { depth: 13, colors: true }));
 
   if (options.deep) {
     var customiser = function customiser(objValue, srcValue) {
@@ -27,7 +29,7 @@ function loadConfig(configName, options) {
 
     return mergeWith.apply(undefined, _toConsumableArray(packageConfigs).concat(_toConsumableArray(configs), [customiser]));
   } else {
-    return Object.assign.apply(null, [{}].concat(packageConfigs).concat(configs));
+    return Object.assign.apply(null, [{}].concat(packageConfigs.reverse()).concat(configs.reverse()));
   }
   return merge[options.deep || false ? 'deep' : 'flat'].apply(null, [{}].concat(packageConfigs).concat(configs));
 }

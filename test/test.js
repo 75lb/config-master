@@ -6,7 +6,7 @@ var path = require('path')
 
 var runner = new TestRunner()
 
-runner.test('Deep Merge Configs', function () {
+runner.only('Deep Merge Configs', function () {
   var config = loadConfig('test-app', {
     startFrom: path.resolve(__dirname, 'fixture/one/two'),
     deep: true
@@ -63,6 +63,17 @@ runner.test('deeper merging arrays', function () {
         "route": "/three",
         "responses": [
           {
+            "request": { "method": "PUT" },
+            "response": {
+              "body": "<h1>Mock response for 'PUT' request on /three</h1>"
+            }
+          }
+        ]
+      },
+      {
+        "route": "/three",
+        "responses": [
+          {
             "request": { "method": "GET" },
             "response": {
               "body": "<h1>Mock response for 'GET' request on /three</h1>"
@@ -73,17 +84,6 @@ runner.test('deeper merging arrays', function () {
             "response": {
               "status": 400,
               "body": { "message": "That method is not allowed." }
-            }
-          }
-        ]
-      },
-      {
-        "route": "/three",
-        "responses": [
-          {
-            "request": { "method": "PUT" },
-            "response": {
-              "body": "<h1>Mock response for 'PUT' request on /three</h1>"
             }
           }
         ]

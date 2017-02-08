@@ -1,0 +1,5 @@
+{
+  "rewrite": [
+     { "from": "/", "to": "/project-folder.txt" }
+  ]
+}

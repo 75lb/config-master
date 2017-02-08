@@ -1,0 +1,6 @@
+{
+  "rewrite": [
+     { "from": "/", "to": "/root-folder.txt" },
+     { "from": "/root-only", "to": "/root-only.txt" }
+  ]
+}
