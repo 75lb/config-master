@@ -23,7 +23,7 @@
     "walk-back": "^2.0.1"
   },
   "devDependencies": {
-    "jsdoc-to-markdown": "^2.0.0-alpha.11",
-    "test-runner": "^0.1.13"
+    "jsdoc-to-markdown": "^2.0.1",
+    "test-runner": "^0.3.0"
   }
 }
