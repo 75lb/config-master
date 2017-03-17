@@ -1,13 +1,13 @@
 'use strict'
-var TestRunner = require('test-runner')
-var loadConfig = require('../')
-var a = require('core-assert')
-var path = require('path')
+const TestRunner = require('test-runner')
+const loadConfig = require('../')
+const a = require('assert')
+const path = require('path')
 
-var runner = new TestRunner()
+const runner = new TestRunner()
 
 runner.only('Deep Merge Configs', function () {
-  var config = loadConfig('test-app', {
+  const config = loadConfig('test-app', {
     startFrom: path.resolve(__dirname, 'fixture/one/two'),
     deep: true
   })
@@ -24,7 +24,7 @@ runner.only('Deep Merge Configs', function () {
 })
 
 runner.test('Default Configs', function () {
-  var config = loadConfig('test-app', {
+  const config = loadConfig('test-app', {
     startFrom: path.resolve(__dirname, 'fixture/one/two')
   })
   a.deepEqual(config, {
@@ -39,7 +39,7 @@ runner.test('Default Configs', function () {
 })
 
 runner.test('deep merging arrays', function () {
-  var config = loadConfig('test-app', {
+  const config = loadConfig('test-app', {
     startFrom: path.resolve(__dirname, 'fixture2/a'),
     deep: true
   })
@@ -53,7 +53,7 @@ runner.test('deep merging arrays', function () {
 })
 
 runner.test('deeper merging arrays', function () {
-  var config = loadConfig('test-app', {
+  const config = loadConfig('test-app', {
     startFrom: path.resolve(__dirname, 'fixture3/a'),
     deep: true
   })

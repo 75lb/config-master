@@ -27,4 +27,4 @@ A convention for storing and retrieving application config. You supply a string 
 
 * * *
 
-&copy; 2014-16 Lloyd Brookes <75pound@gmail.com>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).
+&copy; 2014-17 Lloyd Brookes <75pound@gmail.com>. Documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown).
