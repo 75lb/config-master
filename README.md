@@ -9,8 +9,8 @@
 ## config-master
 A convention for storing and retrieving application config. You supply a string (e.g. `'example-app'`), the libary will walk up the directory tree merging config stored for this app. The following locations are searched, with the latter taking precedence:
 
-- any package.json, beneath the `example-app` property
-- any `.example-app.json` files
+- Any package.json, beneath the `example-app` property.
+- Any `.example-app.json` files (or a custom filename you specify).
 
 <a name="exp_module_config-master--loadConfig"></a>
 
@@ -22,6 +22,7 @@ A convention for storing and retrieving application config. You supply a string 
 | configName | <code>string</code> | config name |
 | [options] | <code>object</code> | options |
 | [options.startFrom] | <code>string</code> | directory to begin looking for config |
+| [options.filename] | <code>string</code> | config filename (defaults to `.${configName}.json`) |
 
 
 * * *
